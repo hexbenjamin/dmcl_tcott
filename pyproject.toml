@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "tcott"
+version = "0.1.0"
+description = "web experience for Dom McLennon's \"The Changing of the Trees\" album rollout"
+authors = ["hex benjamin <hex@hexbenjam.in>"]
+license = "GPL-v3-or-greater"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+reflex = "^0.4.4"
+pydub = "^0.25.1"
+pyaudio = "^0.2.14"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
