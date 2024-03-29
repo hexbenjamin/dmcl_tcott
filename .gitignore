@@ -1,6 +1,6 @@
 *.db
 *.py[cod]
-.web
-__pycache__/
 .vscode
 .vscode/*
+.web
+__pycache__/

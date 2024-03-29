@@ -5,12 +5,6 @@ from rxconfig import config
 import reflex as rx
 
 
-class State(rx.State):
-    """The app state."""
-
-    pass
-
-
 def background():
     return rx.container(
         rx.box(
@@ -63,6 +57,7 @@ def cloud_column(cloud_count: int = 1, cloud_seconds: int = 12):
             "animation-duration": f"{cloud_count * cloud_seconds}s",
             "animation-timing-function": "linear",
             "width": "100%",
+            "z-index": "-1",
             # "border": "1px solid red",
         },
     )
@@ -74,11 +69,32 @@ def landing() -> rx.Component:
     return rx.box(
         background(),
         cloud_column(14),
-        style={
-            "overflow": "hidden",
-            "width": "100vw",
-            "height": "100vh",
-        },
+        rx.container(
+            rx.heading(
+                "The Changing of the Trees",
+                color_scheme="gray",
+                size="7",
+                align="center",
+                justify="center",
+            ),
+            rx.heading(
+                "an album by Dom McLennon",
+                color_scheme="gray",
+                size="3",
+                align="center",
+            ),
+            style={
+                "position": "absolute",
+                "top": "0%",
+                "left": "0%",
+                "width": "100%",
+                "height": "100vh",
+                "justify-content": "center",
+            },
+        ),
+        width="100%",
+        height="100vh",  # Use "100vh" to cover the full viewport height
+        style={"overflow": "hidden"},
     )
 
 
