@@ -18,3 +18,13 @@
     background-image: radial-gradient(circle at 50% 100%, #6AB5DB 0%, #356CBF 69%, #1a488e 100%);
     z-index: -2;
 }
+
+@keyframes cloudscroll {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
